@@ -15,6 +15,8 @@ namespace pryGestorDeClientesCsb
 
         public void Grabar(string Codigo, string Usuario, string Deuda, string Limite)
         {
+
+
             //Abrir
             StreamWriter AD = new StreamWriter(NombreArchivo, true);
             //Cargar
@@ -101,11 +103,15 @@ namespace pryGestorDeClientesCsb
 
         public double promedioDeuda(DataGridView Grilla)
         {
+            double prom = sumarDeuda(Grilla) / cantidadClientes();
+            return prom;
+        }
+
+        public void ListarDeudores(DataGridView Grilla)
+        {
             string DatosLeidos;
             string[] vecVentas = new string[4];
-            double sum = 0;
-            int cont = 0;
-            double prom = 0;
+
 
             //Abrir
             StreamReader AD = new StreamReader(NombreArchivo);
@@ -114,21 +120,18 @@ namespace pryGestorDeClientesCsb
             Grilla.Rows.Clear();
             while (DatosLeidos != null)
             {
-
                 vecVentas = DatosLeidos.Split(';');
-                Grilla.Rows.Add(vecVentas[0], vecVentas[1], vecVentas[2], vecVentas[3]);
-                sum += Convert.ToDouble(vecVentas[3]);
-                cont++;
+                if (Convert.ToInt32(vecVentas[3]) != 0)
+                {
+                    Grilla.Rows.Add(vecVentas[0], vecVentas[1], vecVentas[2], vecVentas[3]);
+                }
+
                 DatosLeidos = AD.ReadLine();
+
             }
             //Cerrar
             AD.Close();
             AD.Dispose();
-            if (cont != 0)
-            {
-                prom = sum / cont;
-            }
-            return prom;
         }
     }
 }

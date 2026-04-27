@@ -59,8 +59,12 @@ namespace pryGestorDeClientesCsb
 
         private void btnCargar_Click(object sender, EventArgs e)
         {
+
+
             x.Grabar(txtCodigo.Text, txtUsuario.Text, txtDeuda.Text, txtLimite.Text);
             MessageBox.Show("Datos grabados correctamente");
         }
+
+
     }
 }

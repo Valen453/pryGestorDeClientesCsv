@@ -72,8 +72,7 @@
             // 
             // txtLimite
             // 
-            this.txtLimite.Enabled = false;
-            this.txtLimite.Location = new System.Drawing.Point(296, 85);
+            this.txtLimite.Location = new System.Drawing.Point(366, 85);
             this.txtLimite.Name = "txtLimite";
             this.txtLimite.Size = new System.Drawing.Size(100, 20);
             this.txtLimite.TabIndex = 3;
@@ -82,7 +81,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(200, 88);
+            this.label4.Location = new System.Drawing.Point(15, 92);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(90, 13);
             this.label4.TabIndex = 6;
@@ -90,8 +89,7 @@
             // 
             // txtUsuario
             // 
-            this.txtUsuario.Enabled = false;
-            this.txtUsuario.Location = new System.Drawing.Point(296, 40);
+            this.txtUsuario.Location = new System.Drawing.Point(366, 41);
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Size = new System.Drawing.Size(170, 20);
             this.txtUsuario.TabIndex = 1;
@@ -100,7 +98,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(238, 44);
+            this.label3.Location = new System.Drawing.Point(293, 48);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(46, 13);
             this.label3.TabIndex = 4;
@@ -108,8 +106,7 @@
             // 
             // txtDeuda
             // 
-            this.txtDeuda.Enabled = false;
-            this.txtDeuda.Location = new System.Drawing.Point(56, 85);
+            this.txtDeuda.Location = new System.Drawing.Point(132, 85);
             this.txtDeuda.Name = "txtDeuda";
             this.txtDeuda.Size = new System.Drawing.Size(100, 20);
             this.txtDeuda.TabIndex = 2;
@@ -118,7 +115,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(15, 88);
+            this.label2.Location = new System.Drawing.Point(293, 92);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(42, 13);
             this.label2.TabIndex = 2;
@@ -126,8 +123,7 @@
             // 
             // txtCodigo
             // 
-            this.txtCodigo.Enabled = false;
-            this.txtCodigo.Location = new System.Drawing.Point(56, 37);
+            this.txtCodigo.Location = new System.Drawing.Point(132, 41);
             this.txtCodigo.Name = "txtCodigo";
             this.txtCodigo.Size = new System.Drawing.Size(100, 20);
             this.txtCodigo.TabIndex = 0;

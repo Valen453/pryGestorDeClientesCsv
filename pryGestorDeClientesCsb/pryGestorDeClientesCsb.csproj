@@ -47,6 +47,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="clsArchivoCliente.cs" />
+    <Compile Include="frmClientesDeudores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmClientesDeudores.Designer.cs">
+      <DependentUpon>frmClientesDeudores.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmListadoClientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -69,6 +75,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmCargarClientes.resx">
       <DependentUpon>frmCargarClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmClientesDeudores.resx">
+      <DependentUpon>frmClientesDeudores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmGestorCsv.resx">
       <DependentUpon>frmGestorCsv.cs</DependentUpon>

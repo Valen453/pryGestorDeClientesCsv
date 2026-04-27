@@ -35,5 +35,12 @@ namespace pryGestorDeClientesCsb
         {
 
         }
+
+        private void listadoDeClientesDeudoresToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form formulario = new frmClientesDeudores();
+            formulario.MdiParent = this;
+            formulario.Show();
+        }
     }
 }
