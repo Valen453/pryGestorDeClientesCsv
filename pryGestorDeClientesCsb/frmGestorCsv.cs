@@ -30,5 +30,10 @@ namespace pryGestorDeClientesCsb
             formulario.MdiParent = this;
             formulario.Show();
         }
+
+        private void frmGestorCsv_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

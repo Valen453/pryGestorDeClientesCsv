@@ -21,7 +21,11 @@ namespace pryGestorDeClientesCsb
 
         private void frmListadoClientes_Load(object sender, EventArgs e)
         {
-            x.Listar(dgvUsuario);
+            x.Listar(dgvUsuario);   
+            lblCantidadClientes.Text = "El total de clientes es de " + Convert.ToString(x.cantidadClientes());
+            lblTotal.Text = "El total de la deuda es de $" + Convert.ToString(x.sumarDeuda(dgvUsuario));
+            lblPromedioDeuda.Text = "El promedio de la deuda es de $" + Convert.ToString(x.promedioDeuda(dgvUsuario));
+
         }
     }
 }
