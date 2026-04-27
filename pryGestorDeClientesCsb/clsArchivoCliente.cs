@@ -101,9 +101,9 @@ namespace pryGestorDeClientesCsb
             return sum;
         }
 
-        public double promedioDeuda(DataGridView Grilla)
+        public double promedioDeuda(int total, double suma)
         {
-            double prom = sumarDeuda(Grilla) / cantidadClientes();
+            double prom = suma / total;
             return prom;
         }
 
@@ -132,6 +132,36 @@ namespace pryGestorDeClientesCsb
             //Cerrar
             AD.Close();
             AD.Dispose();
+        }
+
+        public int cantidadClientesDeudores(DataGridView Grilla)
+        {
+            int cont = 0;
+            string DatosLeidos;
+            string[] vecVentas = new string[4];
+
+
+            //Abrir
+            StreamReader AD = new StreamReader(NombreArchivo);
+            //leer
+            DatosLeidos = AD.ReadLine();
+            Grilla.Rows.Clear();
+            while (DatosLeidos != null)
+            {
+                vecVentas = DatosLeidos.Split(';');
+                if (Convert.ToInt32(vecVentas[3]) != 0)
+                {
+                    cont ++;
+                }
+
+                DatosLeidos = AD.ReadLine();
+
+            }
+            //Cerrar
+            AD.Close();
+            AD.Dispose();
+
+            return cont;
         }
     }
 }
