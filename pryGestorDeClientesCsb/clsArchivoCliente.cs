@@ -169,11 +169,11 @@ namespace pryGestorDeClientesCsb
             string DatosLeidos;
             string[] vecVentas = new string[4];
 
-            StreamWriter Reporte = new StreamWriter("Reporte.csv", false);
+            StreamWriter Reporte = new StreamWriter("Reporte.csv", false, Encoding.UTF8);
             int cantidad = 0;
             decimal total = 0;
             Reporte.WriteLine("Listado de Clientes\n");
-            Reporte.WriteLine("Codigo;Nombre;Limite;Deuda");
+            Reporte.WriteLine("Código;Nombre;Límite;Deuda");
 
 
             //Abrir
