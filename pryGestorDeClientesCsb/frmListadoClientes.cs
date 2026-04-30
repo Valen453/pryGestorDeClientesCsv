@@ -27,5 +27,11 @@ namespace pryGestorDeClientesCsb
             lblPromedioDeuda.Text = "El promedio de la deuda es de $" + Convert.ToString(x.promedioDeuda(x.cantidadClientes(), x.sumarDeuda(dgvUsuario)));
 
         }
+
+        private void btnReporte_Click(object sender, EventArgs e)
+        {
+            x.generarReporte();
+            MessageBox.Show("Reporte generado con exito");
+        }
     }
 }

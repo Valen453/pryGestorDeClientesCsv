@@ -36,6 +36,7 @@
             this.lblTotal = new System.Windows.Forms.Label();
             this.lblCantidadClientes = new System.Windows.Forms.Label();
             this.lblPromedioDeuda = new System.Windows.Forms.Label();
+            this.btnReporte = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -106,17 +107,28 @@
             this.lblPromedioDeuda.TabIndex = 4;
             this.lblPromedioDeuda.Text = "El promedio de la deuda es de $99999.99";
             // 
+            // btnReporte
+            // 
+            this.btnReporte.Location = new System.Drawing.Point(36, 456);
+            this.btnReporte.Name = "btnReporte";
+            this.btnReporte.Size = new System.Drawing.Size(108, 40);
+            this.btnReporte.TabIndex = 6;
+            this.btnReporte.Text = "Generar Reporte";
+            this.btnReporte.UseVisualStyleBackColor = true;
+            this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
+            // 
             // frmListadoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(555, 516);
+            this.ClientSize = new System.Drawing.Size(555, 518);
+            this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.lblCantidadClientes);
             this.Controls.Add(this.lblPromedioDeuda);
             this.Controls.Add(this.lblTotal);
             this.Controls.Add(this.dgvUsuario);
             this.Name = "frmListadoClientes";
-            this.Text = "Form1";
+            this.Text = "Listado de clientes";
             this.Load += new System.EventHandler(this.frmListadoClientes_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).EndInit();
             this.ResumeLayout(false);
@@ -134,5 +146,6 @@
         private System.Windows.Forms.Label lblTotal;
         private System.Windows.Forms.Label lblCantidadClientes;
         private System.Windows.Forms.Label lblPromedioDeuda;
+        private System.Windows.Forms.Button btnReporte;
     }
 }

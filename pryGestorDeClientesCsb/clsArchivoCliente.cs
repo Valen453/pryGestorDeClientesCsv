@@ -163,5 +163,58 @@ namespace pryGestorDeClientesCsb
 
             return cont;
         }
+
+        public void generarReporte()
+        {
+            string DatosLeidos;
+            string[] vecVentas = new string[4];
+
+            StreamWriter Reporte = new StreamWriter("Reporte.csv", false);
+            int cantidad = 0;
+            decimal total = 0;
+            Reporte.WriteLine("Listado de Clientes\n");
+            Reporte.WriteLine("Codigo;Nombre;Limite;Deuda");
+
+
+            //Abrir
+            StreamReader AD = new StreamReader(NombreArchivo);
+            //leer
+            DatosLeidos = AD.ReadLine();
+            while (DatosLeidos != null)
+            {
+                vecVentas = DatosLeidos.Split(';');
+                Reporte.Write(vecVentas[0]);
+                Reporte.Write(';');
+                Reporte.Write(vecVentas[1]);
+                Reporte.Write(';');
+                Reporte.Write(vecVentas[2]);
+                Reporte.Write(';');
+                Reporte.WriteLine(vecVentas[3]);
+                DatosLeidos = AD.ReadLine();
+
+                cantidad++;
+                total = total + Convert.ToDecimal(vecVentas[2]);
+
+            }
+            Reporte.WriteLine("");
+            Reporte.WriteLine("Total de deuda;;Cantidad de deudores;;Promedio de deuda");
+            Reporte.Write(total);
+            Reporte.Write(';');
+            Reporte.Write(';');
+            Reporte.Write(cantidad);
+            Reporte.Write(';');
+            Reporte.Write(';');
+            Reporte.WriteLine(total/cantidad);
+
+            //Cerrar
+
+
+
+            AD.Close();
+            AD.Dispose();
+
+            Reporte.Close();
+            Reporte.Dispose();
+        }
     }
 }
