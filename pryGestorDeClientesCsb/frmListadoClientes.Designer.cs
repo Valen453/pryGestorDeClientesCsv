@@ -37,6 +37,7 @@
             this.lblCantidadClientes = new System.Windows.Forms.Label();
             this.lblPromedioDeuda = new System.Windows.Forms.Label();
             this.btnReporte = new System.Windows.Forms.Button();
+            this.btnOrdenar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUsuario)).BeginInit();
             this.SuspendLayout();
             // 
@@ -109,7 +110,7 @@
             // 
             // btnReporte
             // 
-            this.btnReporte.Location = new System.Drawing.Point(36, 456);
+            this.btnReporte.Location = new System.Drawing.Point(36, 466);
             this.btnReporte.Name = "btnReporte";
             this.btnReporte.Size = new System.Drawing.Size(108, 40);
             this.btnReporte.TabIndex = 6;
@@ -117,11 +118,22 @@
             this.btnReporte.UseVisualStyleBackColor = true;
             this.btnReporte.Click += new System.EventHandler(this.btnReporte_Click);
             // 
+            // btnOrdenar
+            // 
+            this.btnOrdenar.Location = new System.Drawing.Point(36, 420);
+            this.btnOrdenar.Name = "btnOrdenar";
+            this.btnOrdenar.Size = new System.Drawing.Size(108, 40);
+            this.btnOrdenar.TabIndex = 7;
+            this.btnOrdenar.Text = "Ordenar";
+            this.btnOrdenar.UseVisualStyleBackColor = true;
+            this.btnOrdenar.Click += new System.EventHandler(this.btnOrdenar_Click);
+            // 
             // frmListadoClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(555, 518);
+            this.Controls.Add(this.btnOrdenar);
             this.Controls.Add(this.btnReporte);
             this.Controls.Add(this.lblCantidadClientes);
             this.Controls.Add(this.lblPromedioDeuda);
@@ -147,5 +159,6 @@
         private System.Windows.Forms.Label lblCantidadClientes;
         private System.Windows.Forms.Label lblPromedioDeuda;
         private System.Windows.Forms.Button btnReporte;
+        private System.Windows.Forms.Button btnOrdenar;
     }
 }

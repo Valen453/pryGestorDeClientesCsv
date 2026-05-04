@@ -33,5 +33,11 @@ namespace pryGestorDeClientesCsb
             x.generarReporte();
             MessageBox.Show("Reporte generado con exito");
         }
+
+        private void btnOrdenar_Click(object sender, EventArgs e)
+        {
+            x.OrdenarArchivo();
+            x.Listar(dgvUsuario);
+        }
     }
 }
